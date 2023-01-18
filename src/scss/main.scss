@@ -1,0 +1,15 @@
+@import "variables";
+@import "fonts";
+@import "pages/main";
+@import "pages/product";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: $bg-gradient, url(../../public/Pattern@2x.png);
+  background-size: contain;
+  background-position: center;
+}

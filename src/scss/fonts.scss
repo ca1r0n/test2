@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Exo2.0";
+  src: url(../../public/Exo2.0-Thin.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('../../public/Trebuchet-BoldItalic.eot');
+  src: local('Trebuchet MS Bold Italic'), local('Trebuchet-BoldItalic'),
+  url('../../public/Trebuchet-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../../public/Trebuchet-BoldItalic.woff') format('woff'),
+  url('../../public/Trebuchet-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('../../public/TrebuchetMS-Bold.eot');
+  src: local('Trebuchet MS Bold'), local('TrebuchetMS-Bold'),
+  url('../../public/TrebuchetMS-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../public/TrebuchetMS-Bold.woff') format('woff'),
+  url('../../public/TrebuchetMS-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('../../public/TrebuchetMS-Italic.eot');
+  src: local('Trebuchet MS Italic'), local('TrebuchetMS-Italic'),
+  url('../../public/TrebuchetMS-Italic.eot?#iefix') format('embedded-opentype'),
+  url('../../public/TrebuchetMS-Italic.woff') format('woff'),
+  url('../../public/TrebuchetMS-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('../../public/TrebuchetMS.eot');
+  src: local('Trebuchet MS'), local('TrebuchetMS'),
+  url('../../public/TrebuchetMS.eot?#iefix') format('embedded-opentype'),
+  url('../../public/TrebuchetMS.woff') format('woff'),
+  url('../../public/TrebuchetMS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

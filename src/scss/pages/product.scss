@@ -1,0 +1,218 @@
+.product {
+  cursor: pointer;
+  width: 320px;
+  font-family: "Trebuchet MS";
+  overflow: hidden;
+
+  &:hover {
+    .product__top::before {
+      background: linear-gradient(-45deg, #fff, #fff 28px, $blue-hover 0, $blue-hover 32px, transparent 0);
+    }
+
+    .product__top {
+      &::before, &::after {
+        border-color: $blue-hover;
+      }
+    }
+
+    .product__bot {
+      border-color: $blue-hover;
+    }
+
+    .product__mass {
+      background: $blue-hover;
+    }
+  }
+
+  &.selected {
+    .product__top::before {
+      background: linear-gradient(-45deg, #fff, #fff 28px, $red 0, $red 32px, transparent 0);
+    }
+
+    .product__top {
+      &::before, &::after {
+        border-color: $red;
+      }
+    }
+
+    .product__bot {
+      border-color: $red;
+    }
+
+    .product__mass {
+      background: $red;
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+
+    .product__top::before {
+      background: linear-gradient(-45deg, #fff, #fff 28px, $gray 0, $gray 32px, transparent 0);
+    }
+
+    .product__top {
+      &::before, &::after {
+        border-color: $gray;
+      }
+    }
+
+    .product__bot {
+      border-color: $gray;
+    }
+
+    .product__mass {
+      background: $gray;
+    }
+
+    .product__over-title, .product__title, .product__sub-title, .product__composition {
+      color: $gray2;
+      opacity: 0.5;
+    }
+
+    .product__box::before {
+      opacity: 0.5;
+    }
+  }
+
+  &__box {
+    position: relative;
+
+    &::before {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 4px;
+      right: 0;
+      content: "";
+      display: block;
+      background-image: url(../../../public/Cat.png);
+      background-size: contain;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: relative;
+      width: 43px;
+      height: 43px;
+      background: linear-gradient(-45deg, #fff, #fff 28px, $blue 0, $blue 32px, transparent 0);
+    }
+
+    &::after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 43px;
+      top: 0;
+      border: 4px $blue solid;
+      border-radius:  0 0.75rem 0 0;
+      border-bottom: 0;
+      border-left: 0;
+      background: $white;
+    }
+  }
+
+  &__over-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $gray2;
+    margin-top: auto;
+
+    &--danger {
+      color: $red;
+    }
+  }
+
+  &__bot {
+    position: relative;
+    padding:  0 2.4rem;
+    border: 4px $blue solid;
+    border-radius: 0 0 0.75rem 0.75rem;
+    border-top: none;
+    height: 437px;
+    background-color: $white;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $black;
+  }
+
+  &__sub-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  &__composition {
+    color: $gray2;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &__mass {
+    z-index: 2;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    background: $blue;
+    border-radius: 50%;
+    bottom: 1rem;
+    right: 1rem;
+    color: $white;
+  }
+
+  &__mass-top,&__mass-bot {
+    font-weight: 400;
+  }
+
+  &__mass-top {
+    font-size: 2rem;
+  }
+
+  &__mass-bot {
+    font-size: 1rem;
+  }
+
+  &__under {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $white;
+
+    &--yellow {
+      color: $yellow;
+    }
+  }
+
+  &__link {
+    color: $blue;
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+  }
+}
