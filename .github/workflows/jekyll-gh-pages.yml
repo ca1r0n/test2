@@ -21,25 +21,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Build job
   build:
-    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node_version: ['14']
-        os: [ubuntu-latest]
-
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node_version }}
-
-    - name: npm install, build
-      run: |
-        npm install
-        npm run build
+      - name: Deploy React to GitHub Pages
+        uses: bitovi/github-actions-react-to-ghp@v1.2.0
+        with:
+          path: build
+          build_command: npm run build
 
   # Deployment job
   deploy:
