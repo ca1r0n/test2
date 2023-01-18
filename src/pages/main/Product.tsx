@@ -72,7 +72,7 @@ export function Product(props: ProductProps) {
         )}>
             {props.Disabled ? `Печалька, ${props.SubTitle} закончился.` :
                 isSelect ? props.Under :
-                    <>Чего сидишь? Порадуй котэ, <a className={"product__link"} href="/">купи.</a></>}
+                    <>Чего сидишь? Порадуй котэ, <a className={"product__link"} href="#">купи.</a></>}
         </div>
     </div>
 }
